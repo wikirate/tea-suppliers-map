@@ -1,0 +1,31 @@
+<div class="wikirate-container">
+  <div class="row">
+    <div class="title-md">Where <span *ngIf="+pararms.id===0">are the major Tea Buyers</span><span
+      *ngIf="+pararms.id!==0">is {{selected_company}} </span> sourcing from in 2021?
+    </div>
+    <select class="col-3 form-control form-control-sm ml-auto" [(ngModel)]="pararms.id"
+            (change)="navigateToCompany($event)">
+      <option *ngFor="let company of tea_companies" value="{{company.id}}"
+              [selected]="+this.pararms.id === company.id">{{company.name}}</option>
+    </select>
+  </div>
+  <div class="row justify-content-center mt-3" #map>
+    <div id="no_data" class="mt-5 text-center" *ngIf="suppliers && suppliers.length === 0">
+      <img class="mt-5 mb-1" src="assets/sad_face_grey.svg" width="60px">
+      <p class="caption mt-4 showcase-main-text">This company did not disclose its Tea Suppliers.</p>
+    </div>
+  </div>
+  <div class="row" *ngIf="suppliers && suppliers.length > 0">
+    <div class="caption col-12">
+      <p class="text-center">You can see <span *ngIf="+pararms.id === 0">the location of Tea Buyers in Bright Blue and </span>the
+        location of "{{selected_company}}" Tea Suppliers in Orange.</p>
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="row justify-content-end mb-3">
+      <div class="tiny-text align-self-center mr-2">Powered by
+      </div>
+      <a href="https://wikirate.org" target="_blank"><img class="wr-logo" src="assets/Wikirate%20Logo.svg"></a>
+    </div>
+  </div>
+</div>

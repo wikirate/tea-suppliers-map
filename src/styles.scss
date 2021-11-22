@@ -1,1 +1,124 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+@import "~bootstrap";
+
+html {
+  font-size: 16px;
+}
+
+@font-face {
+  font-family: "Mukta";
+  src: local("Mukta-Regular"), url(/assets/fonts/Mukta-Regular.ttf) format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Mukta";
+  src: local("Mukta-ExtraLight"), url(/assets/fonts/Mukta-ExtraLight.ttf) format("truetype");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Mukta";
+  src: local("Mukta-Light"), url(/assets/fonts/Mukta-Light.ttf) format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Mukta";
+  src: local("Mukta-Medium"), url(/assets/fonts/Mukta-Medium.ttf) format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Mukta";
+  src: local("Mukta-SemiBold"), url(/assets/fonts/Mukta-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Mukta";
+  src: local("Mukta-Bold"), url(/assets/fonts/Mukta-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Mukta";
+  src: local("Mukta-ExtraBold"), url(/assets/fonts/Mukta-ExtraBold.ttf) format("truetype");
+  font-weight: 800;
+}
+
+* {
+  font-family: Mukta;
+}
+
+.title-lg {
+  font-size: 1.5625rem;
+  line-height: 1.2;
+  letter-spacing: -0.83;
+}
+
+.title-md {
+  font-size: 1.375rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.title-sm {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.subtitle {
+  font-size: 12pt;
+  line-height: 24;
+  letter-spacing: 0;
+}
+
+body {
+  font-family: Mukta;
+  size: 12pt;
+  letter-spacing: 0;
+}
+
+.caption {
+  font-family: Mukta;
+  size: 12pt;
+  letter-spacing: 0;
+  color: #747485;
+}
+
+svg{
+  max-width: 100%;
+  height: auto;
+}
+
+//bhrrc-colors
+$midnight-plus: #0a1019;
+$midnight: #152234;
+$blue: #2e6fa1;
+$orange: #ffaa23;
+$white: #fff;
+
+.midnight-plus {
+  color: $midnight-plus;
+}
+
+.midnight {
+  color: $midnight;
+}
+
+.blue {
+  color: $blue;
+}
+
+.orange {
+  color: $orange;
+}
+
+.wikirate-container {
+  @extend .container;
+  padding: 4em 3em !important;
+  min-height: 10em !important;
+}
