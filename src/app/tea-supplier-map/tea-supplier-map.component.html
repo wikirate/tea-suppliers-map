@@ -18,7 +18,7 @@
   <div class="row" *ngIf="suppliers && suppliers.length > 0">
     <div class="caption col-12">
       <p class="text-center">You can see <span *ngIf="+pararms.id === 0">the location of Tea Buyers in Bright Blue and </span>the
-        location of "{{selected_company}}" Tea Suppliers in Orange.</p>
+        location of <span *ngIf="+pararms.id !== 0">"{{selected_company}}" </span>Tea Suppliers in Orange.</p>
     </div>
   </div>
   <div class="col-12">

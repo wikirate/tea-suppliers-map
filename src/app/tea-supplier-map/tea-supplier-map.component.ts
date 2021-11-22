@@ -5,8 +5,6 @@ import {ActivatedRoute, Params, Router, RouterModule} from "@angular/router";
 import country_codes from '../../assets/country-codes.json';
 // @ts-ignore
 import wikirate_countries from '../../assets/wikirate-countries.json';
-// @ts-ignore
-import morissons from '../../assets/Morissons_Suppliers.json';
 import embed from "vega-embed";
 import {TeaService} from "../services/tea.service";
 import {Company} from '../models/company.model';
