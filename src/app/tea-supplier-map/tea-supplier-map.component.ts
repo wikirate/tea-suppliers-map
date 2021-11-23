@@ -43,6 +43,7 @@ export class TeaSupplierMapComponent implements OnInit, AfterViewInit, OnDestroy
   ngAfterViewInit(): void {
     this.paramsSubs = this.route.params.subscribe((p: Params) => {
       this.pararms.id = p['id'];
+
       let company = this.teaService.getCompany(+this.pararms.id);
       // @ts-ignore
       this.selected_company = company.name;
@@ -61,7 +62,7 @@ export class TeaSupplierMapComponent implements OnInit, AfterViewInit, OnDestroy
     let value = (<HTMLSelectElement>event.target).value;
     if (value) {
       // @ts-ignore
-      this.router.navigate(['/tea_suppliers_map/' + value]);
+      this.router.navigate(['/' + value]);
     }
   }
 

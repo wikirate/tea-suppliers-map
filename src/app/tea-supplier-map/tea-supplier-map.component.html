@@ -1,7 +1,7 @@
 <div class="wikirate-container">
   <div class="row">
     <div class="title-md">Where <span *ngIf="+pararms.id===0">did major Tea Buyers</span><span
-      *ngIf="+pararms.id!==0">is {{selected_company}} </span> source tea from in 2021?
+      *ngIf="+pararms.id!==0">did {{selected_company}} </span> source tea from in 2021?
     </div>
     <select class="col-3 form-control form-control-sm ml-auto" [(ngModel)]="pararms.id"
             (change)="navigateToCompany($event)">

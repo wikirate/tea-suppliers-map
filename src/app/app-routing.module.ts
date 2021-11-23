@@ -4,11 +4,11 @@ import {TeaSupplierMapComponent} from "./tea-supplier-map/tea-supplier-map.compo
 import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 
 const routes: Routes = [
-  {path: '', redirectTo: 'tea_suppliers_map/0', pathMatch: 'full'},
+  {path: '', redirectTo: '0', pathMatch: 'full'},
   {
-    path: 'tea_suppliers_map/:id', component: TeaSupplierMapComponent
+    path: ':id', component: TeaSupplierMapComponent
   },
-  { path: '**', redirectTo: '/tea_suppliers_map/0', pathMatch: 'full' }
+  { path: '**', redirectTo: '/0', pathMatch: 'full' }
 ];
 
 @NgModule({
