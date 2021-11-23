@@ -24,6 +24,7 @@ export class TeaSupplierMapComponent implements OnInit, AfterViewInit, OnDestroy
   suppliers_map: any;
   tea_companies: Company[] = [];
   selected_company = '';
+  disclosure_percentage = 'Extent of disclosure unknown'
 
   constructor(private http: HttpClient,
               private route: ActivatedRoute,
@@ -67,7 +68,7 @@ export class TeaSupplierMapComponent implements OnInit, AfterViewInit, OnDestroy
   updateMap(company: Company) {
     let url = "https://wikirate.org/Core+Country+Answers.json?filter%5Bnot_ids%5D=&filter%5Bcompany_name%5D=&filter%5Bcompany_group%5D%5B%5D=Tea%20Suppliers&view=answer_list&limit=0";
     if (+company.id !== 0) {
-      url = "https://wikirate.org/Commons+Tea_Supplied_By+RelationshipAnswer/answer_list.json?filter[company_id]="+company.id+"&limit=0";
+      url = "https://wikirate.org/Commons+Tea_Supplied_By+RelationshipAnswer/answer_list.json?filter[company_id]=" + company.id + "&limit=0";
     }
 
 
@@ -240,7 +241,8 @@ export class TeaSupplierMapComponent implements OnInit, AfterViewInit, OnDestroy
               },
               {
                 "name": "companies_and_suppliers",
-                "source": ["tea_companies_per_country", "suppliers_per_country"]
+                "source": ["tea_companies_per_country", "suppliers_per_country"],
+
               },
               {"name": "graticule", "transform": [{"type": "graticule"}]}
             ],
@@ -261,9 +263,9 @@ export class TeaSupplierMapComponent implements OnInit, AfterViewInit, OnDestroy
             "scales": [
               {
                 "name": "size",
-                "domain": {"data": "suppliers_per_country", "field": "companies"},
+                "domain": {"data": "companies_and_suppliers", "field": "companies"},
                 "zero": false,
-                "range": [50, 2000]
+                "range": [100, 4000]
               },
               {
                 "name": "color",
@@ -488,9 +490,10 @@ export class TeaSupplierMapComponent implements OnInit, AfterViewInit, OnDestroy
             "scales": [
               {
                 "name": "size",
+                "type": "linear",
                 "domain": {"data": "suppliers_per_country", "field": "companies"},
                 "zero": false,
-                "range": [50, 2000]
+                "range": [100, 2000]
               },
               {
                 "name": "color",
@@ -564,6 +567,14 @@ export class TeaSupplierMapComponent implements OnInit, AfterViewInit, OnDestroy
               }
             ]
           }, {renderer: "svg"});
+          this.http.get<any>("https://wikirate.org/Business_Human_Rights_Resource_Centre+Percentage_of_Tea_Supply_Chain_Disclosed+Answer.json?filter[company_id]=" + company.id + "&view=answer_list")
+            .subscribe(response => {
+              console.log(response)
+              if (response[0]['value'] !== "Unknown")
+                this.disclosure_percentage = "Percentage of Tea Supply Chain Disclosed: " + response[0]['value'] + "%";
+              else
+                this.disclosure_percentage = "Extent of disclosure unknown"
+            });
         }
 
       });

@@ -1,7 +1,7 @@
 <div class="wikirate-container">
   <div class="row">
-    <div class="title-md">Where <span *ngIf="+pararms.id===0">are the major Tea Buyers</span><span
-      *ngIf="+pararms.id!==0">is {{selected_company}} </span> sourcing from in 2021?
+    <div class="title-md">Where <span *ngIf="+pararms.id===0">did major Tea Buyers</span><span
+      *ngIf="+pararms.id!==0">is {{selected_company}} </span> source tea from in 2021?
     </div>
     <select class="col-3 form-control form-control-sm ml-auto" [(ngModel)]="pararms.id"
             (change)="navigateToCompany($event)">
@@ -17,15 +17,31 @@
   </div>
   <div class="row" *ngIf="suppliers && suppliers.length > 0">
     <div class="caption col-12">
-      <p class="text-center">You can see <span *ngIf="+pararms.id === 0">the location of Tea Buyers in Bright Blue and </span>the
+      <p class="text-center">You can see <span
+        *ngIf="+pararms.id === 0">the location of Tea Buyers who disclosed data to this project in Bright Blue and </span>the
         location of <span *ngIf="+pararms.id !== 0">"{{selected_company}}" </span>Tea Suppliers in Orange.</p>
+      <p class="midnight text-center" *ngIf="+pararms.id !== 0">{{disclosure_percentage}}</p>
     </div>
   </div>
   <div class="col-12">
-    <div class="row justify-content-end mb-3">
-      <div class="tiny-text align-self-center mr-2">Powered by
+    <div class="row mb-3 mt-3">
+      <div class="col-6">
+        <div class="row">
+          <div class="tiny-text align-self-center mr-2">A project by
+          </div>
+          <a class="bhrrc-logo-link" href="https://www.business-humanrights.org/" target="_blank"><img
+            class="bhrrc-logo"
+            src="assets/BHRRC%20logo.svg"></a>
+        </div>
       </div>
-      <a href="https://wikirate.org" target="_blank"><img class="wr-logo" src="assets/Wikirate%20Logo.svg"></a>
+      <div class="col-6 align-self-center">
+        <div class="row justify-content-end mt-2">
+          <div class="tiny-text align-self-center mr-2">Powered by
+          </div>
+          <a class="logo-link" href="https://wikirate.org" target="_blank"><img class="wr-logo"
+                                                                                src="assets/Wikirate%20Logo.svg"></a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
