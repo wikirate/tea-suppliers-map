@@ -1,468 +1,543 @@
 [
   {
     "id": 0,
-    "name": "All"
+    "name": "All",
+    "discloses": true
   },
   {
     "id": 8063323,
     "name": "A.C. Perchs Thehandel Aps",
     "url": "https://wikirate.org/A_C_Perchs_Thehandel_Aps.json",
     "open_corporates": null,
-    "country": "Denmark"
+    "country": "Denmark",
+    "discloses": false
   },
   {
     "id": 8063324,
     "name": "Ahmad Tea",
     "url": "https://wikirate.org/Ahmad_Tea.json",
     "open_corporates": null,
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "discloses": true
   },
   {
     "id": 8063326,
     "name": "Alveus",
     "url": "https://wikirate.org/Alveus.json",
     "open_corporates": null,
-    "country": "Germany"
+    "country": "Germany",
+    "discloses": false
   },
   {
     "id": 8132390,
     "name": "Ecotone",
     "url": "https://wikirate.org/Bell_Tea_Company_Limited.json",
     "open_corporates": null,
-    "country": "France"
+    "country": "France",
+    "discloses": true
   },
   {
     "id": 8063328,
     "name": "Bell Tea Company Limited",
     "url": "https://wikirate.org/Bell_Tea_Company_Limited.json",
     "open_corporates": null,
-    "country": "New Zealand"
+    "country": "New Zealand",
+    "discloses": false
   },
   {
     "id": 8063329,
     "name": "Bigelow Tea",
     "url": "https://wikirate.org/Bigelow_Tea.json",
     "open_corporates": null,
-    "country": "United States"
+    "country": "United States",
+    "discloses": false
   },
   {
     "id": 8063331,
     "name": "Birchall Tea",
     "url": "https://wikirate.org/Birchall_Tea.json",
     "open_corporates": null,
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "discloses": false
   },
   {
     "id": 8063332,
     "name": "E.H.Booth & Co Ltd",
     "url": "https://wikirate.org/E_H_Booth_Co_Ltd.json",
     "open_corporates": null,
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "discloses": false
   },
   {
     "id": 8063333,
     "name": "Brew Tea Company",
     "url": "https://wikirate.org/Brew_Tea_Company.json",
     "open_corporates": null,
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "discloses": false
   },
   {
     "id": 8063334,
     "name": "China Mist Tea Company",
     "url": "https://wikirate.org/China_Mist_Tea_Company.json",
     "open_corporates": null,
-    "country": "United States"
+    "country": "United States",
+    "discloses": false
   },
   {
     "id": 8063335,
     "name": "DAVIDsTEA",
     "url": "https://wikirate.org/DAVIDsTEA.json",
     "open_corporates": null,
-    "country": "Canada"
+    "country": "Canada",
+    "discloses": false
   },
   {
     "id": 8041630,
     "name": "D.J. Miles & Co Ltd",
     "url": "https://wikirate.org/D_J_Miles_Co_Ltd.json",
     "open_corporates": null,
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "discloses": false
   },
   {
     "id": 8063337,
     "name": "East West Tea Company",
     "url": "https://wikirate.org/East_West_Tea_Company.json",
     "open_corporates": null,
-    "country": "United States"
+    "country": "United States",
+    "discloses": true
   },
   {
     "id": 8063338,
     "name": "Eteaket Limited",
     "url": "https://wikirate.org/Eteaket_Limited.json",
     "open_corporates": null,
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "discloses": false
   },
   {
     "id": 8063339,
     "name": "Fortnum & Mason",
     "url": "https://wikirate.org/Fortnum_Mason.json",
     "open_corporates": null,
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "discloses": false
   },
   {
     "id": 8041799,
     "name": "Heritage Teas Private Limited",
     "url": "https://wikirate.org/Heritage_Teas_Private_Limited.json",
     "open_corporates": null,
-    "country": "Sri Lanka"
+    "country": "Sri Lanka",
+    "discloses": false
   },
   {
     "id": 8042731,
     "name": "J.J. Darboven GmbH & Co.KG",
     "url": "https://wikirate.org/J_J_Darboven_GmbH_Co_KG.json",
     "open_corporates": null,
-    "country": "Germany"
+    "country": "Germany",
+    "discloses": false
   },
   {
     "id": 2604021,
     "name": "Douwe Egberts",
     "url": "https://wikirate.org/Douwe_Egberts.json",
     "open_corporates": "30185001",
-    "country": "Netherlands"
+    "country": "Netherlands",
+    "discloses": false
   },
   {
     "id": 8063341,
     "name": "Jenier Limited",
     "url": "https://wikirate.org/Jenier_Limited.json",
     "open_corporates": null,
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "discloses": true
   },
   {
     "id": 8063342,
     "name": "Jing Tea Limited",
     "url": "https://wikirate.org/Jing_Tea_Limited.json",
     "open_corporates": null,
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "discloses": false
   },
   {
     "id": 8063343,
     "name": "JT Ronnefeldt KG",
     "url": "https://wikirate.org/JT_Ronnefeldt_KG.json",
     "open_corporates": null,
-    "country": "Germany"
+    "country": "Germany",
+    "discloses": false
   },
   {
     "id": 947058,
     "name": "Lavazza",
     "url": "https://wikirate.org/Lavazza.json",
     "open_corporates": null,
-    "country": "Italy"
+    "country": "Italy",
+    "discloses": false
   },
   {
     "id": 8063344,
     "name": "Metropolitan Tea Co.",
     "url": "https://wikirate.org/Metropolitan_Tea_Co.json",
     "open_corporates": null,
-    "country": "Canada"
+    "country": "Canada",
+    "discloses": false
   },
   {
     "id": 8042053,
     "name": "Mother Parker's Tea and Coffee",
     "url": "https://wikirate.org/Mother_Parker_s_Tea_and_Coffee.json",
     "open_corporates": null,
-    "country": "Canada"
+    "country": "Canada",
+    "discloses": false
   },
   {
     "id": 8063345,
     "name": "Newby Teas (UK) Limited",
     "url": "https://wikirate.org/Newby_Teas_UK_Limited.json",
     "open_corporates": null,
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "discloses": false
   },
   {
     "id": 6241904,
     "name": "Ostfriesische Tee Gesellschaft GmbH & Co. KG",
     "url": "https://wikirate.org/Ostfriesische_Tee_Gesellschaft_GmbH_Co_KG.json",
     "open_corporates": null,
-    "country": "Germany"
+    "country": "Germany",
+    "discloses": false
   },
   {
     "id": 8063346,
     "name": "project T (The Bean Alliance)",
     "url": "https://wikirate.org/project_T_The_Bean_Alliance.json",
     "open_corporates": null,
-    "country": "Australia"
+    "country": "Australia",
+    "discloses": false
   },
   {
     "id": 8042769,
     "name": "Reginald Ames Ltd",
     "url": "https://wikirate.org/Reginald_Ames_Ltd.json",
     "open_corporates": null,
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "discloses": false
   },
   {
     "id": 3150249,
     "name": "Ringtons Limited",
     "url": "https://wikirate.org/Ringtons_Limited.json",
     "open_corporates": "00572008",
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "discloses": true
   },
   {
     "id": 8063347,
     "name": "Sirocco (A. Kuster Sirocco AG)",
     "url": "https://wikirate.org/Sirocco_A_Kuster_Sirocco_AG.json",
     "open_corporates": null,
-    "country": "Switzerland"
+    "country": "Switzerland",
+    "discloses": false
   },
   {
     "id": 8063348,
     "name": "Starbucks Teavana",
     "url": "https://wikirate.org/Starbucks_Teavana.json",
     "open_corporates": null,
-    "country": "United States"
+    "country": "United States",
+    "discloses": true
   },
   {
     "id": 8063349,
     "name": "Steeped Tea (Steeped Fine Loose Teas & Accessories Inc.)",
     "url": "https://wikirate.org/Steeped_Tea_Steeped_Fine_Loose_Teas_Accessories_Inc.json",
     "open_corporates": null,
-    "country": "Canada"
+    "country": "Canada",
+    "discloses": false
   },
   {
     "id": 6243189,
     "name": "stick & lembke GmbH",
     "url": "https://wikirate.org/stick_lembke_GmbH.json",
     "open_corporates": null,
-    "country": "Germany"
+    "country": "Germany",
+    "discloses": false
   },
   {
     "id": 793455,
     "name": "TAYLORS OF HARROGATE",
     "url": "https://wikirate.org/TAYLORS_OF_HARROGATE.json",
     "open_corporates": null,
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "discloses": true
   },
   {
     "id": 8063362,
     "name": "TEA4TREES",
     "url": "https://wikirate.org/TEA4TREES.json",
     "open_corporates": null,
-    "country": "Germany"
+    "country": "Germany",
+    "discloses": false
   },
   {
     "id": 8063363,
     "name": "Tea Drop Pty Ltd",
     "url": "https://wikirate.org/Tea_Drop_Pty_Ltd.json",
     "open_corporates": null,
-    "country": "Australia"
+    "country": "Australia",
+    "discloses": false
   },
   {
     "id": 8063364,
     "name": "Tea Makers of London",
     "url": "https://wikirate.org/Tea_Makers_of_London.json",
     "open_corporates": null,
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "discloses": false
   },
   {
     "id": 8063365,
     "name": "teapigs",
     "url": "https://wikirate.org/teapigs.json",
     "open_corporates": null,
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "discloses": false
   },
   {
     "id": 8063366,
     "name": "Teasup",
     "url": "https://wikirate.org/Teasup.json",
     "open_corporates": null,
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "discloses": true
   },
   {
     "id": 5210,
     "name": "Tesco PLC",
     "url": "https://wikirate.org/Tesco_PLC.json",
     "open_corporates": "00445790",
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "discloses": true
   },
   {
     "id": 7323561,
     "name": "Tetley",
     "url": "https://wikirate.org/Tetley.json",
     "open_corporates": null,
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "discloses": true
   },
   {
     "id": 8063367,
     "name": "The Republic of Tea",
     "url": "https://wikirate.org/The_Republic_of_Tea.json",
     "open_corporates": null,
-    "country": "United States"
+    "country": "United States",
+    "discloses": false
   },
   {
     "id": 8042158,
     "name": "R Twining and Co. Ltd",
     "url": "https://wikirate.org/R_Twining_and_Co_Ltd.json",
     "open_corporates": null,
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "discloses": false
   },
   {
     "id": 3081386,
     "name": "Typhoo Tea Limited",
     "url": "https://wikirate.org/Typhoo_Tea_Limited.json",
     "open_corporates": "05573418",
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "discloses": true
   },
   {
     "id": 8906,
     "name": "Unilever",
     "url": "https://wikirate.org/Unilever.json",
     "open_corporates": "00041424",
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "discloses": true
   },
   {
     "id": 8063369,
     "name": "Vorwerk Temial GmbH",
     "url": "https://wikirate.org/Vorwerk_Temial_GmbH.json",
     "open_corporates": null,
-    "country": "Germany"
+    "country": "Germany",
+    "discloses": false
   },
   {
     "id": 8063370,
     "name": "Whittard of Chelsea",
     "url": "https://wikirate.org/Whittard_of_Chelsea.json",
     "open_corporates": null,
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "discloses": false
   },
   {
     "id": 8042448,
     "name": "Wollenhaupt Tee GmbH",
     "url": "https://wikirate.org/Wollenhaupt_Tee_GmbH.json",
     "open_corporates": null,
-    "country": "Germany"
+    "country": "Germany",
+    "discloses": false
   },
   {
     "id": 8063372,
     "name": "Yogi Tea",
     "url": "https://wikirate.org/Yogi_Tea.json",
     "open_corporates": null,
-    "country": "Germany"
+    "country": "Germany",
+    "discloses": true
   },
   {
     "id": 48256,
     "name": "Aldi Nord",
     "url": "https://wikirate.org/Aldi_Nord.json",
     "open_corporates": "3531671",
-    "country": "Germany"
+    "country": "Germany",
+    "discloses": false
   },
   {
     "id": 5208,
     "name": "Aldi Sud",
     "url": "https://wikirate.org/Aldi_Sud.json",
     "open_corporates": null,
-    "country": "Germany"
+    "country": "Germany",
+    "discloses": false
   },
   {
     "id": 11071,
     "name": "Lidl Stiftung & Co. KG",
     "url": "https://wikirate.org/Lidl_Stiftung_Co_KG.json",
     "open_corporates": null,
-    "country": "Germany"
+    "country": "Germany",
+    "discloses": false
   },
   {
     "id": 57199,
     "name": "Sainsbury's",
     "url": "https://wikirate.org/Sainsbury_s.json",
     "open_corporates": "00185647",
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "discloses": false
   },
   {
     "id": 2620838,
     "name": "Morrisons",
     "url": "https://wikirate.org/Morrisons.json",
     "open_corporates": "02280567",
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "discloses": true
+  },
+  {
+    "id": 9269,
+    "name": "Marks and Spencer Group plc",
+    "url": "https://wikirate.org/Marks_and_Spencer_Group_plc.json",
+    "open_corporates": null,
+    "country": "United Kingdom",
+    "discloses": true
   },
   {
     "id": 5764326,
     "name": "Royal Ahold Delhaize N.V.",
     "url": "https://wikirate.org/Royal_Ahold_Delhaize_N_V.json",
     "open_corporates": null,
-    "country": "Netherlands"
+    "country": "Netherlands",
+    "discloses": false
   },
   {
     "id": 5760246,
     "name": "Albertsons",
     "url": "https://wikirate.org/Albertsons.json",
     "open_corporates": null,
-    "country": "United States"
+    "country": "United States",
+    "discloses": false
   },
   {
     "id": 46533,
     "name": "Jumbo",
     "url": "https://wikirate.org/Jumbo.json",
     "open_corporates": null,
-    "country": "Netherlands"
+    "country": "Netherlands",
+    "discloses": false
   },
   {
     "id": 5113,
     "name": "Whole Foods Market Inc.",
     "url": "https://wikirate.org/Whole_Foods_Market_Inc.json",
     "open_corporates": "0044435900",
-    "country": "United States"
+    "country": "United States",
+    "discloses": false
   },
   {
     "id": 42637,
     "name": "The Kroger Company",
     "url": "https://wikirate.org/The_Kroger_Company.json",
     "open_corporates": "14931",
-    "country": "United States"
+    "country": "United States",
+    "discloses": false
   },
   {
     "id": 1625335,
     "name": "EDEKA Group",
     "url": "https://wikirate.org/EDEKA_Group.json",
     "open_corporates": null,
-    "country": "Germany"
+    "country": "Germany",
+    "discloses": false
   },
   {
     "id": 176017,
     "name": "REWE Group",
     "url": "https://wikirate.org/REWE_Group.json",
     "open_corporates": null,
-    "country": "Germany"
+    "country": "Germany",
+    "discloses": false
   },
   {
     "id": 46536,
     "name": "PLUS Holding B V",
     "url": "https://wikirate.org/PLUS_Holding_B_V.json",
     "open_corporates": null,
-    "country": "Netherlands"
+    "country": "Netherlands",
+    "discloses": true
   },
   {
     "id": 42628,
     "name": "Walmart",
     "url": "https://wikirate.org/Walmart.json",
     "open_corporates": "800173692",
-    "country": "United States"
+    "country": "United States",
+    "discloses": false
   },
   {
     "id": 3081234,
     "name": "Finlays",
     "url": "https://wikirate.org/Finlays.json",
     "open_corporates": null,
-    "country": "United States"
+    "country": "United States",
+    "discloses": true
   },
   {
     "id": 8051714,
     "name": "Tata Consumer Products Limited",
     "url": "https://wikirate.org/Tata_Consumer_Products_Limited.json",
     "open_corporates": null,
-    "country": "India"
+    "country": "India",
+    "discloses": true
   },
   {
     "id": 8114965,
     "name": "Punjana Limited",
     "url": "https://wikirate.org/Punjana_Limited.json",
     "open_corporates": "NI003724",
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "discloses": true
   }
 ]
