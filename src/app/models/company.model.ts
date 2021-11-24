@@ -1,4 +1,4 @@
 export class Company {
-  constructor(public id: number, public name: string, public url: string, public headquarters: string) {
+  constructor(public id: number, public name: string, public url: string, public headquarters: string, public discloses: boolean) {
   }
 }
