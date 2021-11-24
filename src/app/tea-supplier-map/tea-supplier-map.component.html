@@ -6,7 +6,7 @@
     <select class="col-3 form-control form-control-sm ml-auto" [(ngModel)]="pararms.id"
             (change)="navigateToCompany($event)">
       <option *ngFor="let company of tea_companies" value="{{company.id}}"
-              [selected]="+this.pararms.id === company.id">{{company.name}}</option>
+              [selected]="+this.pararms.id === company.id" [class.active]="company.discloses">{{company.name}}</option>
     </select>
   </div>
   <div class="row justify-content-center mt-3" #map>
