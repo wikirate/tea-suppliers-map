@@ -19,7 +19,7 @@
     <div class="caption col-12">
       <p class="text-center">You can see <span
         *ngIf="+pararms.id === 0">the location of Tea Buyers who disclosed data to this project in Bright Blue and </span>the
-        location of <span class="active" *ngIf="+pararms.id !== 0">{{selected_company}} </span>Tea Suppliers in Orange.</p>
+        location of <span *ngIf="+pararms.id !== 0"><span class="active">{{selected_company}}</span> in Bright Blue and their </span>Tea Suppliers in Orange.</p>
       <p class="midnight text-center" *ngIf="+pararms.id !== 0">{{disclosure_percentage}}</p>
     </div>
   </div>
