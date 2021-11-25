@@ -19,12 +19,13 @@ export class TeaSupplierMapComponent implements OnInit, AfterViewInit, OnDestroy
   paramsSubs!: Subscription;
   // @ts-ignore
   @ViewChild('map', {static: false}) mapElement: ElementRef;
-  suppliers: [] = [];
+  suppliers: any[] = [];
   pararms!: { id: number };
   suppliers_map: any;
   tea_companies: Company[] = [];
   selected_company = '';
   disclosure_percentage = 'Extent of disclosure unknown'
+  intemediaries: number[] = [8041656, 8041935, 8041515, 8041793, 8042893, 8141618, 8041819, 8042448, 5417546, 8042769, 8063329, 8042893, 8141619, 8042322, 8141620, 8042422, 3081234, 8063370, 8114965]
 
   constructor(private http: HttpClient,
               private route: ActivatedRoute,
@@ -84,7 +85,11 @@ export class TeaSupplierMapComponent implements OnInit, AfterViewInit, OnDestroy
           this.suppliers = response;
 
           if (this.suppliers.length > 0 && +company.id === 0) {
-            console.log("Hello World")
+            for (var i = 0; i < this.intemediaries.length; i++) {
+              this.suppliers = this.suppliers.filter(e => {
+                return e['company'] !== this.intemediaries[i]
+              })
+            }
             this.suppliers_map = this.renderer.createElement('div');
             this.suppliers_map.id = "supplier-map";
             this.renderer.appendChild(this.mapElement.nativeElement, this.suppliers_map)
@@ -142,7 +147,7 @@ export class TeaSupplierMapComponent implements OnInit, AfterViewInit, OnDestroy
                 },
                 {
                   "name": "suppliers",
-                  "url": "https://wikirate.org/Core+Country+Answers.json?filter%5Bnot_ids%5D=&filter%5Bcompany_name%5D=&filter%5Bcompany_group%5D%5B%5D=Tea%20Suppliers&view=answer_list&limit=0"
+                  "values": this.suppliers,
                 },
                 {
                   "name": "wikirate_countries",
@@ -337,6 +342,12 @@ export class TeaSupplierMapComponent implements OnInit, AfterViewInit, OnDestroy
               ]
             }, {renderer: "svg"});
           } else if (this.suppliers.length > 0) {
+            for (var i = 0; i < this.intemediaries.length; i++) {
+              this.suppliers = this.suppliers.filter(e => {
+                return e['object_company'] !== this.intemediaries[i]
+              })
+            }
+
             this.suppliers_map = this.renderer.createElement('div');
             this.suppliers_map.id = "supplier-map";
             this.renderer.appendChild(this.mapElement.nativeElement, this.suppliers_map)
@@ -416,6 +427,47 @@ export class TeaSupplierMapComponent implements OnInit, AfterViewInit, OnDestroy
                   "format": {"type": "json", "parse": {"country-code": "number"}}
                 },
                 {
+                  "name": "selected_company",
+                  "values": [{
+                    "value": company.country,
+                    "companies": 1,
+                    "type": "Tea Buyer",
+                    "color": "#3FA8D4",
+                    "title": company.name
+                  }],
+                  "transform": [
+                    {
+                      "type": "lookup",
+                      "from": "wikirate_countries",
+                      "key": "name",
+                      "fields": ["value"],
+                      "values": ["code"],
+                      "as": ["country_code"]
+                    },
+                    {
+                      "type": "lookup",
+                      "from": "country_codes",
+                      "key": "alpha-2",
+                      "fields": ["country_code"],
+                      "values": ["country-code"],
+                      "as": ["country_number"]
+                    },
+                    {
+                      "type": "lookup",
+                      "from": "world",
+                      "key": "id",
+                      "fields": ["country_number"],
+                      "as": ["geo"]
+                    },
+                    {"type": "filter", "expr": "datum.geo"},
+                    {
+                      "type": "formula",
+                      "as": "centroid",
+                      "expr": "geoCentroid('projection', datum.geo)"
+                    }
+                  ]
+                },
+                {
                   "name": "suppliers_per_country",
                   "source": "suppliers",
                   "transform": [
@@ -467,6 +519,10 @@ export class TeaSupplierMapComponent implements OnInit, AfterViewInit, OnDestroy
                     }
                   ]
                 },
+                {
+                  "name": "companies_and_suppliers",
+                  "source": ["selected_company", "suppliers_per_country"]
+                },
                 {"name": "graticule", "transform": [{"type": "graticule"}]}
               ],
               "projections": [
@@ -493,16 +549,9 @@ export class TeaSupplierMapComponent implements OnInit, AfterViewInit, OnDestroy
                 {
                   "name": "size",
                   "type": "linear",
-                  "domain": {"data": "suppliers_per_country", "field": "companies"},
+                  "domain": {"data": "companies_and_suppliers", "field": "companies"},
                   "zero": false,
                   "range": [100, 2000]
-                },
-                {
-                  "name": "color",
-                  "type": "linear",
-                  "nice": true,
-                  "domain": {"data": "suppliers_per_country", "field": "companies"},
-                  "range": ["#ffe7c0", "#ffaa23"]
                 }
               ],
               "marks": [
@@ -535,7 +584,7 @@ export class TeaSupplierMapComponent implements OnInit, AfterViewInit, OnDestroy
                 {
                   "name": "circles",
                   "type": "symbol",
-                  "from": {"data": "suppliers_per_country"},
+                  "from": {"data": "companies_and_suppliers"},
                   "encode": {
                     "enter": {
                       "x": {"field": "centroid[0]"},
@@ -543,7 +592,7 @@ export class TeaSupplierMapComponent implements OnInit, AfterViewInit, OnDestroy
                       "size": {"scale": "size", "field": "companies"},
                       "strokeWidth": {"value": 0.7},
                       "tooltip": {
-                        "signal": "{'title' : datum.value, 'No. of Suppliers': datum.companies}"
+                        "signal": "{'title' : datum.title, 'Country': datum.value, 'No. of Entities': datum.companies, 'Type of Entities': datum.type}"
                       }
                     },
                     "update": {
@@ -571,7 +620,6 @@ export class TeaSupplierMapComponent implements OnInit, AfterViewInit, OnDestroy
             }, {renderer: "svg"});
             this.http.get<any>("https://wikirate.org/Business_Human_Rights_Resource_Centre+Percentage_of_Tea_Supply_Chain_Disclosed+Answer.json?filter[company_id]=" + company.id + "&view=answer_list")
               .subscribe(response => {
-                console.log(response)
                 if (response[0]['value'] !== "Unknown")
                   this.disclosure_percentage = "Percentage of Tea Supply Chain Disclosed: " + response[0]['value'] + "%";
                 else
